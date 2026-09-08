@@ -484,3 +484,95 @@ h1 span{color:var(--brick-dark);}
 @media (prefers-reduced-motion:reduce){
   *{animation:none !important;transition:none !important;}
 }
+
+/* ---------- CONTACT PAGE ---------- */
+.contact-page{
+  background:#f4fafe;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+.contact-topbar{
+  padding:22px 28px;
+  border-bottom:1px solid #dbe6ef;
+  background:#fff;
+}
+.contact-logo{
+  font-family:'Baloo 2',cursive;
+  font-size:1.5rem;
+  font-weight:800;
+  color:var(--ink);
+  text-decoration:none;
+}
+.contact-logo span{color:var(--brick-dark);}
+.contact-main{
+  flex:1;
+  width:100%;
+  max-width:680px;
+  margin:0 auto;
+  padding:48px 20px 64px;
+}
+.contact-title{
+  font-family:'Baloo 2',cursive;
+  font-size:clamp(1.9rem,4.5vw,2.8rem);
+  color:var(--ink);
+  margin-bottom:28px;
+}
+.contact-form{
+  display:flex;
+  flex-direction:column;
+}
+.contact-form label{
+  font-size:1.05rem;
+  font-weight:700;
+  color:var(--ink);
+  margin-bottom:8px;
+}
+.contact-form input,
+.contact-form textarea{
+  font-family:'Nunito',sans-serif;
+  font-size:1rem;
+  color:var(--ink);
+  background:#fff;
+  border:1.5px solid #c9d6e2;
+  border-radius:10px;
+  padding:12px 14px;
+  margin-bottom:22px;
+  width:100%;
+  transition:border-color .15s ease, box-shadow .15s ease;
+}
+.contact-form textarea{resize:vertical;}
+.contact-form input:focus,
+.contact-form textarea:focus{
+  outline:none;
+  border-color:var(--bot-blue);
+  box-shadow:0 0 0 3px rgba(90,169,230,.25);
+}
+.contact-submit{
+  align-self:center;
+  font-family:'Baloo 2',cursive;
+  font-size:1.05rem;
+  font-weight:700;
+  letter-spacing:.04em;
+  color:#fff;
+  background:var(--brick);
+  border:none;
+  border-radius:999px;
+  padding:13px 42px;
+  cursor:pointer;
+  box-shadow:0 5px 0 var(--brick-dark);
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.contact-submit:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--brick-dark);}
+.contact-submit:active{transform:translateY(3px);box-shadow:0 2px 0 var(--brick-dark);}
+.contact-submit:focus-visible{outline:3px solid var(--ink);outline-offset:3px;}
+.footer-links a.is-current{color:#7df9ff;}
+
+.form-status{
+  text-align:center;
+  font-weight:700;
+  margin-top:16px;
+  min-height:1.4em;
+}
+.form-status.ok{color:#2f7d4f;}
+.form-status.err{color:#b8412f;}

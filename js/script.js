@@ -14,15 +14,20 @@ const lessons = [
 ];
 
 const speechText = document.getElementById('speechText');
+const speechLive = document.getElementById('speechLive');
 const robot = document.getElementById('robot');
-const startBtn = document.getElementById('startBtn');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+const AUTO_ADVANCE_MS = 9000;
 let index = 0;
 let typeTimer = null;
+let autoTimer = null;
 
 function typeLesson(text){
   clearInterval(typeTimer);
+  // screen readers get the whole sentence at once, not letter by letter
+  if (speechLive) speechLive.textContent = text;
+
   if (reduceMotion){
     speechText.textContent = text;
     return;
@@ -35,20 +40,19 @@ function typeLesson(text){
   }, 26);
 }
 
+function startAutoAdvance(){
+  clearInterval(autoTimer);
+  autoTimer = setInterval(nextLesson, AUTO_ADVANCE_MS);
+}
+
 function nextLesson(){
   index = (index + 1) % lessons.length;
   typeLesson(lessons[index]);
+  startAutoAdvance();   // a click restarts the 9-second countdown
 }
 
 robot.addEventListener('click', nextLesson);
-startBtn.addEventListener('click', () => {
-  index = 0;
-  typeLesson(lessons[0]);
-  document.getElementById('robo').scrollIntoView({behavior:'smooth'});
-});
-
-// auto-advance every 9 seconds
-setInterval(nextLesson, 9000);
 
 // kick off
 typeLesson(lessons[0]);
+startAutoAdvance();

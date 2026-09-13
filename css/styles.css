@@ -20,6 +20,25 @@
   --bot-blue:#5aa9e6;
   --bot-dark:#3d7fb5;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 *{margin:0;padding:0;box-sizing:border-box;}
 html,body{height:100%;}
 body{
@@ -55,6 +74,66 @@ body{
   line-height:1.1;
 }
 .subject-panel .subjects{padding:0;margin-top:22px;}
+
+
+/* 1. Make widths predictable: padding no longer adds to element width */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Nothing may be wider than the screen */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 3. Side gutter on every section so text never touches the edge */
+header, main, footer, section {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* 4. Center content and cap its width on big screens */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 5. Stack the subject cards on small screens */
+@media (max-width: 600px) {
+  .subjects {            /* whatever wraps Math Lab / Science / English */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .subject-card {
+    width: 100%;
+  }
+  header, main, footer, section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ---------- SCHOOL SCENE BACKGROUND ---------- */
 .scene{

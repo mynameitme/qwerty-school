@@ -538,7 +538,9 @@ h1 span{color:var(--brick-dark);}
   flex-direction:column;
 }
 .contact-topbar{
-  padding:22px 28px;
+  display:flex;
+  justify-content:center;
+  padding:18px 28px;
   border-bottom:1px solid #dbe6ef;
   background:#fff;
 }

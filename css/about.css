@@ -1,0 +1,109 @@
+/* ---------- ABOUT PAGE ---------- */
+.about-main{
+  width:100%;
+  max-width:860px;
+  margin:0 auto;
+  padding:40px 20px 64px;
+}
+.about-hero{
+  display:flex;
+  align-items:center;
+  gap:32px;
+  margin-bottom:40px;
+}
+.about-hero-text{flex:1;}
+.about-kicker{
+  font-family:'Baloo 2',cursive;
+  font-weight:800;
+  font-size:1rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--brick-dark);
+}
+.about-hero h1{
+  font-family:'Baloo 2',cursive;
+  font-size:clamp(2rem,4.5vw,3rem);
+  line-height:1.1;
+  color:var(--ink);
+  margin:4px 0 12px;
+}
+.about-lead{
+  font-size:1.15rem;
+  font-weight:600;
+  color:#3c4a5a;
+  line-height:1.55;
+}
+.about-hero-img{
+  width:170px;
+  height:auto;
+  flex-shrink:0;
+  filter:drop-shadow(0 12px 16px rgba(39,50,63,.18));
+}
+.about-block{
+  background:#fff;
+  border-radius:20px;
+  padding:26px 28px;
+  box-shadow:0 8px 22px rgba(39,50,63,.08);
+  margin-bottom:22px;
+}
+.about-block h2{
+  font-family:'Baloo 2',cursive;
+  font-size:1.5rem;
+  color:var(--ink);
+  margin-bottom:10px;
+}
+.about-block p{
+  font-size:1.02rem;
+  font-weight:600;
+  color:#3c4a5a;
+  line-height:1.6;
+}
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  margin-top:6px;
+}
+.about-card{
+  display:block;
+  text-decoration:none;
+  background:#f4fafe;
+  border:2px solid #c9d6e2;
+  border-radius:14px;
+  padding:16px 18px;
+  transition:border-color .15s ease, transform .15s ease, background .15s ease;
+}
+.about-card:hover{border-color:var(--bot-blue);background:#eaf6ff;transform:translateY(-3px);}
+.about-card-emoji{font-size:1.8rem;display:block;margin-bottom:4px;}
+.about-card h3{
+  font-family:'Baloo 2',cursive;
+  font-size:1.15rem;
+  color:var(--ink);
+  margin-bottom:2px;
+}
+.about-card p{font-size:.92rem;line-height:1.45;}
+.about-list{
+  list-style:none;
+  padding:0;
+  margin-top:4px;
+}
+.about-list li{
+  font-size:1.02rem;
+  font-weight:600;
+  color:#3c4a5a;
+  padding:6px 0 6px 30px;
+  position:relative;
+}
+.about-list li::before{
+  content:"✅";
+  position:absolute;
+  left:0;
+}
+.about-contact{text-align:center;}
+.about-contact .cta{display:inline-block;margin-top:16px;}
+@media (max-width:640px){
+  .about-hero{flex-direction:column-reverse;text-align:center;gap:18px;}
+  .about-hero-img{width:130px;}
+  .about-grid{grid-template-columns:1fr;}
+  .about-block{padding:20px 18px;}
+}

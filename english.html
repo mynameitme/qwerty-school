@@ -21,32 +21,24 @@
 
 <main class="lesson-main">
   <p class="lesson-kicker">📖 English</p>
-  <h1 class="lesson-title" id="lessonTitle">English with Robo</h1>
-  <p class="lesson-intro" id="lessonIntro">Pick a quiz and Robo will check your answers as you go!</p>
+  <h1 class="lesson-title">Pick a lesson</h1>
+  <p class="lesson-intro">Each lesson opens on its own page. Robo checks your answers as you go!</p>
 
-  <div>
-    <div class="lesson-list" id="lessonList"></div>
-
-    <section class="quiz" id="quiz" hidden>
-      <div class="quiz-progress"><div class="quiz-bar" id="quizBar"></div></div>
-      <p class="quiz-count" id="quizCount"></p>
-      <h2 class="quiz-question" id="quizQuestion"></h2>
-      <div class="quiz-options" id="quizOptions"></div>
-      <p class="quiz-feedback" id="quizFeedback"></p>
-      <button class="cta quiz-next" id="quizNext" hidden>Next →</button>
-    </section>
-
-    <section class="quiz-result" id="quizResult" hidden>
-      <div class="result-emoji" id="resultEmoji">🎉</div>
-      <h2 id="resultTitle"></h2>
-      <p id="resultText"></p>
-      <div class="result-btns">
-        <button class="cta" id="retryBtn">Try again</button>
-        <button class="cta cta-outline" id="backBtn">All quizzes</button>
-      </div>
-    </section>
+  <!-- LESSON LIST: one line per lesson. To add a lesson, add a line here
+       and create its page in the lessons folder (copy any existing one). -->
+  <div class="lesson-list">
+    <a class="subject-btn lesson-btn" href="lessons/01-vowels.html">Vowels <small>4 questions</small></a>
+    <a class="subject-btn lesson-btn" href="lessons/02-rhyming-words.html">Rhyming words <small>3 questions</small></a>
+    <a class="subject-btn lesson-btn" href="lessons/03-capital-letters.html">Capital letters <small>3 questions</small></a>
+    <a class="subject-btn lesson-btn" href="lessons/04-one-or-many.html">One or many? <small>3 questions</small></a>
+    <a class="subject-btn lesson-btn" href="lessons/05-opposites.html">Opposites <small>4 questions</small></a>
+    <a class="subject-btn lesson-btn" href="lessons/06-nouns-and-verbs.html">Nouns and verbs <small>4 questions</small></a>
+    <a class="subject-btn lesson-btn" href="lessons/07-past-tense.html">Past tense <small>4 questions</small></a>
+    <a class="subject-btn lesson-btn" href="lessons/08-punctuation.html">Punctuation <small>4 questions</small></a>
+    <a class="subject-btn lesson-btn" href="lessons/09-synonyms.html">Synonyms <small>4 questions</small></a>
+    <a class="subject-btn lesson-btn" href="lessons/10-reading-the-lost-kitten.html">Reading: The lost kitten <small>4 questions</small></a>
+    <a class="subject-btn lesson-btn" href="lessons/11-tricky-spelling.html">Tricky spelling <small>4 questions</small></a>
   </div>
-
 </main>
 
 <footer class="site-footer">
@@ -63,20 +55,5 @@
   <hr class="footer-divider">
   <p class="footer-copy">Copyright © 2026 Qwerty Academy. All rights reserved.</p>
 </footer>
-
-<!-- LESSONS: one file each. To add a lesson, create a file in js/lessons and add a line here. -->
-<script>const LESSONS = [];</script>
-<script src="js/lessons/01-vowels.js"></script>
-<script src="js/lessons/02-rhyming-words.js"></script>
-<script src="js/lessons/03-capital-letters.js"></script>
-<script src="js/lessons/04-one-or-many.js"></script>
-<script src="js/lessons/05-opposites.js"></script>
-<script src="js/lessons/06-nouns-and-verbs.js"></script>
-<script src="js/lessons/07-past-tense.js"></script>
-<script src="js/lessons/08-punctuation.js"></script>
-<script src="js/lessons/09-synonyms.js"></script>
-<script src="js/lessons/10-reading-the-lost-kitten.js"></script>
-<script src="js/lessons/11-tricky-spelling.js"></script>
-<script src="js/quiz.js"></script>
 </body>
 </html>

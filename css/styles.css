@@ -65,12 +65,12 @@ img, video, iframe{max-width:100%;height:auto;}
 }
 .site-logo a{display:inline-block;}
 .site-logo img{
-  height:52px;
+  height:80px;
   width:auto;
   display:block;
 }
 @media (max-width:600px){
-  .site-logo img{height:34px;}
+  .site-logo img{height:48px;}
 }
 
 /* ---------- COMING SOON / 404 PAGES ---------- */

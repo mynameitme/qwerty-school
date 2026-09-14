@@ -4,7 +4,7 @@
 const $ = (id) => document.getElementById(id);
 
 /* ---------- quizzes ---------- */
-const lessonList = $('lessonList');
+const lessonList = $('lessonList'); // not used on single-lesson pages
 const quiz = $('quiz');
 const result = $('quizResult');
 
@@ -18,6 +18,7 @@ function setHeading(title, intro) {
 }
 
 function showLessons() {
+  if (!lessonList) { window.location.href = '../english.html'; return; }
   setHeading('Pick a quiz', 'Robo checks your answers as you go!');
   lessonList.innerHTML = '';
   LESSONS.forEach((lesson, i) => {
@@ -37,7 +38,7 @@ function startLesson(i) {
   qIndex = 0;
   score = 0;
   setHeading(current.title, current.intro);
-  lessonList.hidden = true;
+  if (lessonList) lessonList.hidden = true;
   result.hidden = true;
   quiz.hidden = false;
   showQuestion();
@@ -106,7 +107,8 @@ function showResult() {
 }
 
 $('retryBtn').addEventListener('click', () => startLesson(LESSONS.indexOf(current)));
-$('backBtn').addEventListener('click', showLessons);
+if ($('backBtn')) $('backBtn').addEventListener('click', showLessons);
 
-/* start */
-showLessons();
+/* start: a lesson page runs its one lesson straight away */
+if (document.body.dataset.single) startLesson(0);
+else showLessons();

@@ -623,3 +623,57 @@ h1 span{color:var(--brick-dark);}
 }
 .form-status.ok{color:#2f7d4f;}
 .form-status.err{color:#b8412f;}
+
+
+
+
+
+
+/* ---------- DUSK SKY (just after sunset) ---------- */
+body{
+  background:#1b2440;
+}
+.page-1{
+  background:linear-gradient(
+    180deg,
+    #0f1a3a 0%,
+    #23305e 25%,
+    #4a3f7a 48%,
+    #8a4c7d 64%,
+    #d4705a 80%,
+    #f2a86c 92%,
+    #ffd9a8 100%
+  );
+}
+
+/* faint stars in the dark part of the sky */
+.page-1::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 14%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 28% 9%,  #fff, transparent),
+    radial-gradient(1px 1px   at 41% 22%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 57% 12%, #fff, transparent),
+    radial-gradient(1px 1px   at 66% 27%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 78% 8%,  #fff, transparent),
+    radial-gradient(1px 1px   at 88% 19%, #fff, transparent),
+    radial-gradient(1px 1px   at 94% 33%, #fff, transparent);
+  opacity:.75;
+}
+
+/* clouds turn dusk pink */
+.cloud, .cloud::before, .cloud::after{
+  background:#e9b4c4;
+  opacity:.65;
+}
+
+/* homepage text & buttons stay readable on the dark sky (homepage only) */
+.page-1 .panel-title{color:#fff7ea;}
+.page-1 .subject-btn{
+  color:#fff7ea;
+  border-color:#fff7ea;
+}
+.page-1 .subject-btn:hover{background:#fff7ea;color:#1b2440;}

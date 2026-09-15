@@ -628,105 +628,67 @@ h1 span{color:var(--brick-dark);}
 
 
 
-/* ---------- DEEP SPACE SKY ---------- */
-body{
-  background:#05070f;
-}
+/* ============================================================
+   REAL NIGHT SKY — white stars, faint horizon haze — homepage only
+   ============================================================ */
+body{ background:#020409; }
+
 .page-1{
   background:
-    /* nebula glows */
-    radial-gradient(60% 45% at 18% 30%, rgba(120,70,200,.45), transparent 70%),
-    radial-gradient(50% 40% at 82% 22%, rgba(40,120,220,.40), transparent 70%),
-    radial-gradient(45% 35% at 55% 70%, rgba(200,60,140,.28), transparent 70%),
-    radial-gradient(70% 50% at 50% 100%, rgba(60,160,220,.25), transparent 70%),
-    /* the void */
-    linear-gradient(180deg,#02030a 0%,#080c1f 55%,#0d1430 100%);
+    radial-gradient(90% 40% at 50% 105%, rgba(70,95,140,.28), transparent 70%),        /* faint horizon glow */
+    linear-gradient(115deg, transparent 40%, rgba(255,255,255,.045) 50%, transparent 60%), /* faint milky-way haze */
+    linear-gradient(180deg,#02040b 0%,#040817 45%,#071027 80%,#0b1631 100%);
 }
 
-/* dense starfield: three layers of different sizes */
+/* starfield: two small star patterns tiled across the sky at different sizes,
+   so the repeat is never noticeable */
 .page-1::before{
   content:"";
   position:absolute;
   inset:0;
   pointer-events:none;
   background-image:
-    /* tiny stars */
-    radial-gradient(1px 1px at 5% 12%, #fff, transparent),
-    radial-gradient(1px 1px at 11% 46%, #fff, transparent),
-    radial-gradient(1px 1px at 17% 78%, #cfe3ff, transparent),
-    radial-gradient(1px 1px at 23% 27%, #fff, transparent),
-    radial-gradient(1px 1px at 29% 63%, #fff, transparent),
-    radial-gradient(1px 1px at 35% 9%,  #cfe3ff, transparent),
-    radial-gradient(1px 1px at 41% 41%, #fff, transparent),
-    radial-gradient(1px 1px at 47% 84%, #fff, transparent),
-    radial-gradient(1px 1px at 53% 19%, #fff, transparent),
-    radial-gradient(1px 1px at 59% 57%, #cfe3ff, transparent),
-    radial-gradient(1px 1px at 65% 33%, #fff, transparent),
-    radial-gradient(1px 1px at 71% 71%, #fff, transparent),
-    radial-gradient(1px 1px at 77% 15%, #fff, transparent),
-    radial-gradient(1px 1px at 83% 49%, #cfe3ff, transparent),
-    radial-gradient(1px 1px at 89% 88%, #fff, transparent),
-    radial-gradient(1px 1px at 95% 24%, #fff, transparent),
-    radial-gradient(1px 1px at 8%  92%, #fff, transparent),
-    radial-gradient(1px 1px at 38% 96%, #fff, transparent),
-    radial-gradient(1px 1px at 62% 5%,  #fff, transparent),
-    radial-gradient(1px 1px at 92% 66%, #fff, transparent),
-    /* medium stars */
-    radial-gradient(1.6px 1.6px at 14% 22%, #fff, transparent),
-    radial-gradient(1.6px 1.6px at 26% 81%, #fff, transparent),
-    radial-gradient(1.6px 1.6px at 44% 14%, #fff, transparent),
-    radial-gradient(1.6px 1.6px at 56% 47%, #ffe9c4, transparent),
-    radial-gradient(1.6px 1.6px at 68% 90%, #fff, transparent),
-    radial-gradient(1.6px 1.6px at 74% 38%, #fff, transparent),
-    radial-gradient(1.6px 1.6px at 86% 8%,  #cfe3ff, transparent),
-    radial-gradient(1.6px 1.6px at 97% 52%, #fff, transparent),
-    radial-gradient(1.6px 1.6px at 3%  60%, #fff, transparent),
-    radial-gradient(1.6px 1.6px at 50% 75%, #fff, transparent),
-    /* bright stars with glow */
-    radial-gradient(3px 3px at 20% 55%, #fff 30%, rgba(255,255,255,0) 70%),
-    radial-gradient(3px 3px at 73% 24%, #ffe9c4 30%, rgba(255,255,255,0) 70%),
-    radial-gradient(3px 3px at 90% 79%, #cfe3ff 30%, rgba(255,255,255,0) 70%),
-    radial-gradient(3px 3px at 33% 36%, #fff 30%, rgba(255,255,255,0) 70%);
-  animation:twinkle 5s ease-in-out infinite alternate;
+    /* layer 1 – faint small stars */
+    radial-gradient(1px 1px at 12px 33px,  rgba(255,255,255,.5), transparent),
+    radial-gradient(1px 1px at 78px 9px,   rgba(255,255,255,.4), transparent),
+    radial-gradient(1px 1px at 141px 71px, rgba(255,255,255,.6), transparent),
+    radial-gradient(1px 1px at 47px 118px, rgba(255,255,255,.4), transparent),
+    radial-gradient(1px 1px at 190px 150px,rgba(255,255,255,.5), transparent),
+    radial-gradient(1px 1px at 103px 176px,rgba(255,255,255,.35),transparent),
+    radial-gradient(1px 1px at 22px 199px, rgba(255,255,255,.55),transparent),
+    radial-gradient(1px 1px at 166px 26px, rgba(255,255,255,.45),transparent),
+    /* layer 2 – brighter stars, larger tile */
+    radial-gradient(1.5px 1.5px at 60px 40px,  #fff, transparent),
+    radial-gradient(1.5px 1.5px at 240px 130px,#fff, transparent),
+    radial-gradient(1.5px 1.5px at 130px 250px,#fff, transparent),
+    radial-gradient(2px 2px     at 300px 60px, #fff, transparent),
+    radial-gradient(4px 4px     at 180px 190px,#fff 25%, rgba(255,255,255,.35) 45%, rgba(255,255,255,0) 70%);
+  background-size:
+    210px 210px, 210px 210px, 210px 210px, 210px 210px,
+    210px 210px, 210px 210px, 210px 210px, 210px 210px,
+    340px 340px, 340px 340px, 340px 340px, 340px 340px, 340px 340px;
+  animation:twinkle 6s ease-in-out infinite alternate;
 }
 @keyframes twinkle{
-  from{opacity:.75;}
+  from{opacity:.82;}
   to{opacity:1;}
 }
 
-/* a distant planet rising on the right, with a shadowed edge */
-.page-1::after{
-  content:"";
-  position:absolute;
-  right:-6vw;
-  bottom:18vh;
-  width:34vw;
-  height:34vw;
-  max-width:420px;
-  max-height:420px;
-  border-radius:50%;
-  pointer-events:none;
-  background:
-    radial-gradient(circle at 32% 30%, #b8e4ff 0%, #4f9fd8 28%, #274b8a 60%, #0c1a3d 100%);
-  box-shadow:
-    inset -30px -20px 60px rgba(0,0,0,.65),
-    0 0 60px rgba(90,170,255,.35);
-}
-
-/* clouds don't belong in space */
+/* no clouds at night */
 .cloud{display:none;}
 
-/* homepage text & buttons readable on the dark sky (homepage only) */
-.page-1 .panel-title{color:#fff;text-shadow:0 0 14px rgba(120,170,255,.6);}
+/* homepage text & buttons: simple white, no glow (homepage only) */
+.page-1 .panel-title{ color:#fff; text-shadow:none; }
 .page-1 .subject-btn{
   color:#fff;
-  border-color:rgba(255,255,255,.85);
-  background:rgba(10,16,40,.45);
-  backdrop-filter:blur(4px);
-  box-shadow:0 0 14px rgba(90,170,255,.25);
+  border:2px solid #fff;
+  background:transparent;
+  box-shadow:none;
+  text-shadow:none;
 }
-.page-1 .subject-btn:hover{
-  background:#fff;
-  color:#05070f;
-  box-shadow:0 0 22px rgba(120,190,255,.7);
+.page-1 .subject-btn:hover{ background:#fff; color:#050a1c; box-shadow:none; }
+.page-1 .cta-outline{
+  color:#fff;
+  border-color:#fff;
+  box-shadow:0 5px 0 rgba(255,255,255,.35);
 }

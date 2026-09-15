@@ -628,52 +628,105 @@ h1 span{color:var(--brick-dark);}
 
 
 
-
-/* ---------- DUSK SKY (just after sunset) ---------- */
+/* ---------- DEEP SPACE SKY ---------- */
 body{
-  background:#1b2440;
+  background:#05070f;
 }
 .page-1{
-  background:linear-gradient(
-    180deg,
-    #0f1a3a 0%,
-    #23305e 25%,
-    #4a3f7a 48%,
-    #8a4c7d 64%,
-    #d4705a 80%,
-    #f2a86c 92%,
-    #ffd9a8 100%
-  );
+  background:
+    /* nebula glows */
+    radial-gradient(60% 45% at 18% 30%, rgba(120,70,200,.45), transparent 70%),
+    radial-gradient(50% 40% at 82% 22%, rgba(40,120,220,.40), transparent 70%),
+    radial-gradient(45% 35% at 55% 70%, rgba(200,60,140,.28), transparent 70%),
+    radial-gradient(70% 50% at 50% 100%, rgba(60,160,220,.25), transparent 70%),
+    /* the void */
+    linear-gradient(180deg,#02030a 0%,#080c1f 55%,#0d1430 100%);
 }
 
-/* faint stars in the dark part of the sky */
+/* dense starfield: three layers of different sizes */
 .page-1::before{
   content:"";
   position:absolute;
   inset:0;
   pointer-events:none;
   background-image:
-    radial-gradient(1.5px 1.5px at 12% 14%, #fff, transparent),
-    radial-gradient(1.5px 1.5px at 28% 9%,  #fff, transparent),
-    radial-gradient(1px 1px   at 41% 22%, #fff, transparent),
-    radial-gradient(1.5px 1.5px at 57% 12%, #fff, transparent),
-    radial-gradient(1px 1px   at 66% 27%, #fff, transparent),
-    radial-gradient(1.5px 1.5px at 78% 8%,  #fff, transparent),
-    radial-gradient(1px 1px   at 88% 19%, #fff, transparent),
-    radial-gradient(1px 1px   at 94% 33%, #fff, transparent);
-  opacity:.75;
+    /* tiny stars */
+    radial-gradient(1px 1px at 5% 12%, #fff, transparent),
+    radial-gradient(1px 1px at 11% 46%, #fff, transparent),
+    radial-gradient(1px 1px at 17% 78%, #cfe3ff, transparent),
+    radial-gradient(1px 1px at 23% 27%, #fff, transparent),
+    radial-gradient(1px 1px at 29% 63%, #fff, transparent),
+    radial-gradient(1px 1px at 35% 9%,  #cfe3ff, transparent),
+    radial-gradient(1px 1px at 41% 41%, #fff, transparent),
+    radial-gradient(1px 1px at 47% 84%, #fff, transparent),
+    radial-gradient(1px 1px at 53% 19%, #fff, transparent),
+    radial-gradient(1px 1px at 59% 57%, #cfe3ff, transparent),
+    radial-gradient(1px 1px at 65% 33%, #fff, transparent),
+    radial-gradient(1px 1px at 71% 71%, #fff, transparent),
+    radial-gradient(1px 1px at 77% 15%, #fff, transparent),
+    radial-gradient(1px 1px at 83% 49%, #cfe3ff, transparent),
+    radial-gradient(1px 1px at 89% 88%, #fff, transparent),
+    radial-gradient(1px 1px at 95% 24%, #fff, transparent),
+    radial-gradient(1px 1px at 8%  92%, #fff, transparent),
+    radial-gradient(1px 1px at 38% 96%, #fff, transparent),
+    radial-gradient(1px 1px at 62% 5%,  #fff, transparent),
+    radial-gradient(1px 1px at 92% 66%, #fff, transparent),
+    /* medium stars */
+    radial-gradient(1.6px 1.6px at 14% 22%, #fff, transparent),
+    radial-gradient(1.6px 1.6px at 26% 81%, #fff, transparent),
+    radial-gradient(1.6px 1.6px at 44% 14%, #fff, transparent),
+    radial-gradient(1.6px 1.6px at 56% 47%, #ffe9c4, transparent),
+    radial-gradient(1.6px 1.6px at 68% 90%, #fff, transparent),
+    radial-gradient(1.6px 1.6px at 74% 38%, #fff, transparent),
+    radial-gradient(1.6px 1.6px at 86% 8%,  #cfe3ff, transparent),
+    radial-gradient(1.6px 1.6px at 97% 52%, #fff, transparent),
+    radial-gradient(1.6px 1.6px at 3%  60%, #fff, transparent),
+    radial-gradient(1.6px 1.6px at 50% 75%, #fff, transparent),
+    /* bright stars with glow */
+    radial-gradient(3px 3px at 20% 55%, #fff 30%, rgba(255,255,255,0) 70%),
+    radial-gradient(3px 3px at 73% 24%, #ffe9c4 30%, rgba(255,255,255,0) 70%),
+    radial-gradient(3px 3px at 90% 79%, #cfe3ff 30%, rgba(255,255,255,0) 70%),
+    radial-gradient(3px 3px at 33% 36%, #fff 30%, rgba(255,255,255,0) 70%);
+  animation:twinkle 5s ease-in-out infinite alternate;
+}
+@keyframes twinkle{
+  from{opacity:.75;}
+  to{opacity:1;}
 }
 
-/* clouds turn dusk pink */
-.cloud, .cloud::before, .cloud::after{
-  background:#e9b4c4;
-  opacity:.65;
+/* a distant planet rising on the right, with a shadowed edge */
+.page-1::after{
+  content:"";
+  position:absolute;
+  right:-6vw;
+  bottom:18vh;
+  width:34vw;
+  height:34vw;
+  max-width:420px;
+  max-height:420px;
+  border-radius:50%;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 32% 30%, #b8e4ff 0%, #4f9fd8 28%, #274b8a 60%, #0c1a3d 100%);
+  box-shadow:
+    inset -30px -20px 60px rgba(0,0,0,.65),
+    0 0 60px rgba(90,170,255,.35);
 }
 
-/* homepage text & buttons stay readable on the dark sky (homepage only) */
-.page-1 .panel-title{color:#fff7ea;}
+/* clouds don't belong in space */
+.cloud{display:none;}
+
+/* homepage text & buttons readable on the dark sky (homepage only) */
+.page-1 .panel-title{color:#fff;text-shadow:0 0 14px rgba(120,170,255,.6);}
 .page-1 .subject-btn{
-  color:#fff7ea;
-  border-color:#fff7ea;
+  color:#fff;
+  border-color:rgba(255,255,255,.85);
+  background:rgba(10,16,40,.45);
+  backdrop-filter:blur(4px);
+  box-shadow:0 0 14px rgba(90,170,255,.25);
 }
-.page-1 .subject-btn:hover{background:#fff7ea;color:#1b2440;}
+.page-1 .subject-btn:hover{
+  background:#fff;
+  color:#05070f;
+  box-shadow:0 0 22px rgba(120,190,255,.7);
+}

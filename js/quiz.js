@@ -109,6 +109,26 @@ function showResult() {
 $('retryBtn').addEventListener('click', () => startLesson(LESSONS.indexOf(current)));
 if ($('backBtn')) $('backBtn').addEventListener('click', showLessons);
 
-/* start: a lesson page runs its one lesson straight away */
-if (document.body.dataset.single) startLesson(0);
+/* ---------- explanation shown before the quiz ---------- */
+function showExplanation(i) {
+  const L = LESSONS[i];
+  if (!L.explain || !L.explain.length) { startLesson(i); return; }
+  setHeading(L.title, L.intro);
+  quiz.hidden = true; result.hidden = true;
+  let box = $('lessonExplain');
+  if (!box) {
+    box = document.createElement('section');
+    box.className = 'lesson-explain';
+    box.id = 'lessonExplain';
+    quiz.parentNode.insertBefore(box, quiz);
+  }
+  box.innerHTML = '<p class="explain-label">📘 Let\'s learn</p>' +
+    L.explain.map(p => '<p>' + p + '</p>').join('') +
+    '<button class="cta" id="startQuizBtn">Start the quiz →</button>';
+  box.hidden = false;
+  $('startQuizBtn').addEventListener('click', () => { box.hidden = true; startLesson(i); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+}
+
+/* start: a lesson page shows its explanation first, then the quiz */
+if (document.body.dataset.single) showExplanation(0);
 else showLessons();

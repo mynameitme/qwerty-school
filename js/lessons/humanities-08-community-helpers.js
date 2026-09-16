@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Community helpers",
   intro: "Who keeps our town safe, healthy and running?",
+  explain: [
+    "A <b>community</b> is all the people who live and work in the same area. Many of them have jobs that help everyone.",
+    "<b>Firefighters</b> put out fires. <b>Doctors</b> and <b>nurses</b> help sick people. <b>Police officers</b> keep us safe. <b>Postal workers</b> deliver letters.",
+    "<b>Farmers</b> grow the food we eat, and <b>teachers</b> help us learn."
+  ],
   questions: [
     {
       q: "Who puts out fires?",

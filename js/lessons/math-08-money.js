@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Money",
   intro: "Let's add up coins and work out change.",
+  explain: [
+    "Money comes in <b>coins</b> and <b>notes</b>. Coins are worth different amounts, so we add them up to find the total.",
+    "There are <b>100 cents</b> in 1 dollar. Two 25¢ coins make 50¢. Four 25¢ coins make $1.",
+    "<b>Change</b> is the money you get back. If a toy costs $3 and you pay $5, your change is 5 − 3 = <b>$2</b>."
+  ],
   questions: [
     {
       q: "How many cents are in one dollar?",

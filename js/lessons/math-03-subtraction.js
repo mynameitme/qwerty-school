@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Subtraction",
   intro: "Subtracting means taking away.",
+  explain: [
+    "<b>Subtracting</b> means taking away. The sign is <b>−</b> (minus).",
+    "<b>9 − 4</b>: start at 9 and count back 4 — 8, 7, 6, 5. So 9 − 4 = <b>5</b>.",
+    "If you have 10 sweets and eat 3, you subtract: 10 − 3 = <b>7</b> sweets left."
+  ],
   questions: [
     {
       q: "9 − 4 = ?",

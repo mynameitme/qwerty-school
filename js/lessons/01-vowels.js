@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Vowels",
   intro: "Every word needs at least one vowel. Can you spot them?",
+  explain: [
+    "The alphabet has 26 letters. Five of them are special — they are called <b>vowels</b>: <b>A, E, I, O, U</b>.",
+    "Every word needs at least one vowel. Try saying <b>cat</b>, <b>dog</b> or <b>sun</b> — the vowel is the sound in the middle that opens your mouth!",
+    "All the other letters (like B, C, D, T…) are called <b>consonants</b>."
+  ],
   questions: [
     {
       q: "Which of these letters is a vowel?",

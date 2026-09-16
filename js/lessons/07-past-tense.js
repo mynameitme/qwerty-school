@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Past tense",
   intro: "Past tense tells us something already happened.",
+  explain: [
+    "The <b>past tense</b> tells us something has <b>already happened</b>.",
+    "For most verbs, we add <b>-ed</b>: walk → walk<b>ed</b>, jump → jump<b>ed</b>, finish → finish<b>ed</b>.",
+    "Some verbs are <b>irregular</b> and change completely: go → <b>went</b>, make → <b>made</b>, eat → <b>ate</b>. You just have to learn those ones!"
+  ],
   questions: [
     {
       q: "Yesterday I ___ to the park.",

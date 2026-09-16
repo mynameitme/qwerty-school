@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Continents and oceans",
   intro: "Our world has 7 continents and 5 oceans. Let's explore the map!",
+  explain: [
+    "The land on Earth is split into <b>7 continents</b>: Africa, Antarctica, Asia, Australia, Europe, North America and South America.",
+    "The water is split into <b>5 oceans</b>. The biggest is the <b>Pacific</b> — it covers a third of the whole planet!",
+    "<b>Antarctica</b> is the coldest continent, covered in ice. <b>Asia</b> is the biggest and has the most people."
+  ],
   questions: [
     {
       q: "How many continents are there?",

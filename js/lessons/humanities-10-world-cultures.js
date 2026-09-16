@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "World cultures",
   intro: "Different countries, different languages, foods and festivals!",
+  explain: [
+    "<b>Culture</b> is the way a group of people live — their language, food, clothes, music and festivals.",
+    "In <b>Spain</b> people speak Spanish. In <b>Japan</b> they eat sushi. In <b>India</b> they celebrate <b>Diwali</b>, the festival of lights. In <b>Egypt</b> you can see the ancient pyramids.",
+    "Learning about other cultures helps us understand and respect people from all over the world."
+  ],
   questions: [
     {
       q: "Which language is spoken in Spain?",

@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Famous explorers",
   intro: "Brave people who travelled to places no one had seen before.",
+  explain: [
+    "<b>Explorers</b> are brave people who travel to places nobody from their home has seen before.",
+    "<b>Marco Polo</b> travelled from Europe to China. <b>Christopher Columbus</b> sailed across the Atlantic in 1492. <b>Amelia Earhart</b> was the first woman to fly alone across the Atlantic.",
+    "In 1969, <b>Neil Armstrong</b> became the first person to walk on the <b>Moon</b>."
+  ],
   questions: [
     {
       q: "Who was the first person to walk on the Moon?",

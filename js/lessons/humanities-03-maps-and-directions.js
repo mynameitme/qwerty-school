@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Maps and directions",
   intro: "North, south, east, west — let's learn to read a map!",
+  explain: [
+    "A <b>map</b> is a drawing of a place from above. A book of maps is called an <b>atlas</b>.",
+    "Maps use four main <b>directions</b>: <b>North, East, South, West</b>. North is usually at the top. Remember them clockwise: <i>Never Eat Soggy Waffles</i>.",
+    "A <b>compass</b> has a tiny magnet needle that always points north. If you face north, east is on your right — where the sun rises."
+  ],
   questions: [
     {
       q: "On most maps, which direction is at the top?",

@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Multiplication",
   intro: "Multiplying is adding the same number again and again.",
+  explain: [
+    "<b>Multiplying</b> is a quick way of adding the same number again and again. The sign is <b>×</b> (times).",
+    "<b>2 × 3</b> means <i>2, three times</i>: 2 + 2 + 2 = <b>6</b>.",
+    "Learning your <b>times tables</b> makes this fast: 5 × 4 = 20, 7 × 6 = 42, 9 × 9 = 81."
+  ],
   questions: [
     {
       q: "2 × 3 = ?",

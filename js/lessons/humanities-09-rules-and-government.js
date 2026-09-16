@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Rules and government",
   intro: "Why we have rules, and who makes the big decisions.",
+  explain: [
+    "<b>Rules</b> keep people safe and make things fair — at home, at school and in games.",
+    "A country's rules are called <b>laws</b>, and everyone must follow them. The <b>government</b> makes the laws and runs the country.",
+    "In many countries, people choose their leaders by <b>voting</b> in an <b>election</b>. At school, the <b>head teacher</b> is in charge."
+  ],
   questions: [
     {
       q: "Why do we have rules?",

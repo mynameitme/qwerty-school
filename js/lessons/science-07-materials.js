@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Materials",
   intro: "Wood, metal, plastic, glass — what are things made of?",
+  explain: [
+    "Everything is made of <b>materials</b> — wood, metal, plastic, glass, paper, wool.",
+    "Materials have <b>properties</b>. Glass is <b>transparent</b> (see-through). Wool is warm. Metal is strong and hard. Cork is light, so it <b>floats</b>.",
+    "<b>Magnets</b> only stick to some metals, like <b>iron</b> and steel — not to plastic, paper or wood."
+  ],
   questions: [
     {
       q: "Which material is see-through?",

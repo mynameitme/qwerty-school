@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "The human body",
   intro: "Your body is amazing! Let's learn what's inside.",
+  explain: [
+    "Inside your body are <b>organs</b>, each with a special job.",
+    "Your <b>heart</b> pumps blood around your body — about 100,000 beats a day! Your <b>lungs</b> fill with air when you breathe. Your <b>brain</b> controls everything you think and do.",
+    "Your <b>skeleton</b> holds you up. An adult has <b>206 bones</b>."
+  ],
   questions: [
     {
       q: "Which organ pumps blood around your body?",

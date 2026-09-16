@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Knights and castles",
   intro: "Life in the Middle Ages — castles, kings and knights.",
+  explain: [
+    "In the <b>Middle Ages</b> (about 500 to 1,500 years ago), kings and lords lived in <b>castles</b> built to protect them from attack.",
+    "Castles had thick walls, tall towers, and often a <b>moat</b> — a ditch full of water — with a <b>drawbridge</b> that could be pulled up.",
+    "<b>Knights</b> were soldiers on horseback who wore heavy metal <b>armour</b>. A boy started as a <b>page</b>, became a <b>squire</b>, and finally a knight."
+  ],
   questions: [
     {
       q: "Why were castles built?",

@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Ancient Rome",
   intro: "Gladiators, roads and a huge empire.",
+  explain: [
+    "<b>Ancient Rome</b> began as a small town in <b>Italy</b> and grew into a huge empire across Europe, North Africa and the Middle East.",
+    "Roman soldiers, called <b>legionaries</b>, marched in big groups called legions. The Romans built straight roads and <b>aqueducts</b> — long stone bridges that carried water to their cities.",
+    "In the <b>Colosseum</b>, up to 50,000 people watched gladiators fight."
+  ],
   questions: [
     {
       q: "In which country was Ancient Rome?",

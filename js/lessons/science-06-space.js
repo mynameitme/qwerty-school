@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Space",
   intro: "Planets, stars and the Moon — let's zoom into space!",
+  explain: [
+    "We live on planet <b>Earth</b>. Earth travels around the <b>Sun</b>, which is a giant, very hot <b>star</b>.",
+    "One full trip around the Sun takes <b>one year</b>. The <b>Moon</b> travels around Earth.",
+    "There are 8 planets. <b>Mars</b> is called the Red Planet because of its rusty red dust."
+  ],
   questions: [
     {
       q: "Which planet do we live on?",

@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Weather",
   intro: "Sun, rain, wind and snow — what makes the weather?",
+  explain: [
+    "<b>Weather</b> is what the sky and air are doing — sunny, cloudy, rainy, windy or snowy.",
+    "<b>Clouds</b> are made of millions of tiny water drops. When they get heavy, the water falls as <b>rain</b>. When it's very cold (0°C), water freezes into <b>ice</b> and snow.",
+    "We measure how hot or cold it is with a <b>thermometer</b>. A <b>rainbow</b> appears when sunlight shines through raindrops."
+  ],
   questions: [
     {
       q: "What are clouds made of?",

@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Division",
   intro: "Dividing means sharing equally.",
+  explain: [
+    "<b>Dividing</b> means sharing equally. The sign is <b>÷</b>.",
+    "<b>6 ÷ 2</b>: share 6 sweets between 2 friends — each gets <b>3</b>.",
+    "Division is the opposite of multiplication. If 4 × 3 = 12, then 12 ÷ 4 = <b>3</b>. Knowing your times tables helps you divide!"
+  ],
   questions: [
     {
       q: "6 ÷ 2 = ?",

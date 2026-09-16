@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Light and sound",
   intro: "How do we see and hear the world around us?",
+  explain: [
+    "<b>Light</b> lets us see. Some things make their own light, like the <b>Sun</b> and lamps. Others, like the Moon and mirrors, only <b>reflect</b> light.",
+    "When something blocks light, it makes a <b>shadow</b> behind it.",
+    "<b>Sound</b> is made when things <b>vibrate</b> (shake very fast). Put your hand on your throat and hum — feel it wobble! Big vibrations make loud sounds, like thunder."
+  ],
   questions: [
     {
       q: "Which of these gives off its own light?",

@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Plants",
   intro: "Plants make their own food using sunlight. Let's see how they work!",
+  explain: [
+    "Plants are living things that make their own food using <b>sunlight</b>. This is called <b>photosynthesis</b>.",
+    "Each part has a job. <b>Roots</b> drink water from the soil. The <b>stem</b> holds the plant up. <b>Leaves</b> catch sunlight. <b>Flowers</b> make seeds.",
+    "Plants give out <b>oxygen</b> — the gas we breathe. That's why trees are so important!"
+  ],
   questions: [
     {
       q: "Which part of a plant takes in water from the soil?",

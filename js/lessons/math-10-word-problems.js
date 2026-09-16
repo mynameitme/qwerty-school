@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Word problems",
   intro: "Read the story, find the numbers, and work it out!",
+  explain: [
+    "A <b>word problem</b> is a maths question hidden inside a little story.",
+    "Read it carefully, find the <b>numbers</b>, and look for clue words. <i>Altogether</i> or <i>in total</i> means <b>add</b>. <i>Left</i> or <i>fly away</i> means <b>subtract</b>. <i>Each</i> often means <b>multiply</b>.",
+    "Example: <i>Sam has 4 red apples and 3 green apples.</i> The clue is <i>has</i>, so we add: 4 + 3 = <b>7</b>."
+  ],
   questions: [
     {
       q: "Sam has 4 red apples and 3 green apples. How many apples does he have?",

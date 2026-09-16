@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Synonyms",
   intro: "Synonyms are different words with almost the same meaning.",
+  explain: [
+    "<b>Synonyms</b> are different words that mean almost the same thing.",
+    "<b>Big</b> and <b>large</b>. <b>Happy</b> and <b>glad</b>. <b>Fast</b> and <b>quick</b>. <b>Begin</b> and <b>start</b>.",
+    "Using synonyms makes your writing more interesting — instead of saying <i>nice</i> every time, you could say <i>kind</i>, <i>lovely</i> or <i>friendly</i>."
+  ],
   questions: [
     {
       q: "Which word means the same as 'big'?",

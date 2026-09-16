@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Telling the time",
   intro: "The short hand shows the hour, the long hand shows the minutes.",
+  explain: [
+    "A clock has two hands. The <b>short hand</b> points to the <b>hour</b>. The <b>long hand</b> points to the <b>minutes</b>.",
+    "When the long hand points straight up to 12, it's <b>o'clock</b>. When it points down to 6, it's <b>half past</b> (30 minutes).",
+    "There are <b>60 minutes</b> in an hour and <b>24 hours</b> in a day."
+  ],
   questions: [
     {
       q: "How many minutes are in one hour?",

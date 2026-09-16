@@ -5,11 +5,18 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Reading: The lost kitten",
   intro: "Read the short story, then answer the questions.",
+  explain: [
+    "In this lesson you will read a short story and answer questions about it. This is called <b>reading comprehension</b>.",
+    "Here is the story:",
+    "<i>Mia found a small grey kitten under a bench in the park. It was cold and hungry, so she wrapped it in her scarf and took it home. Her mum gave it warm milk and they named it Pebble.</i>",
+    "Read it twice, then answer the questions. If you're not sure, come back and read it again — the answers are all in the story!"
+  ],
   questions: [
     {
       q: "Story: 'Mia found a small grey kitten under a bench in the park. It was cold and hungry, so she wrapped it in her scarf and took it home. Her mum gave it warm milk and they named it Pebble.'\n\nWhere did Mia find the kitten?",

@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Punctuation",
   intro: "Full stops, question marks and exclamation marks tell us how to read.",
+  explain: [
+    "<b>Punctuation marks</b> are little signs that help us read sentences properly.",
+    "A <b>full stop (.)</b> ends a normal sentence. A <b>question mark (?)</b> ends a question. An <b>exclamation mark (!)</b> shows surprise or excitement.",
+    "A <b>comma (,)</b> separates items in a list: <i>apples, oranges and pears</i>. And <b>it's</b> with an apostrophe means <i>it is</i>."
+  ],
   questions: [
     {
       q: "Which mark goes at the end of a question?",

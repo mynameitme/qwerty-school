@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Capital letters",
   intro: "Big letters go at the start of a sentence and in names.",
+  explain: [
+    "A <b>capital letter</b> is a big letter, like <b>A</b> instead of <b>a</b>.",
+    "We use a capital letter at the <b>start of every sentence</b>: <i>The dog runs.</i>",
+    "We also use capitals for <b>names</b> of people and places — <b>Emma</b>, <b>London</b>, <b>Monday</b> — and for the word <b>I</b>."
+  ],
   questions: [
     {
       q: "Which sentence is written correctly?",

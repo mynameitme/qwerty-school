@@ -5,11 +5,17 @@
      options – the answers shown
      answer  – number of the correct option (0 = first, 1 = second …)
      tip     – shown after the child answers
+     explain – the short lesson text shown BEFORE the quiz (one line per paragraph)
    ============================================================ */
 
 LESSONS.push({
   title: "Opposites",
   intro: "Opposites are words that mean the reverse of each other.",
+  explain: [
+    "<b>Opposites</b> are two words that mean completely the reverse of each other.",
+    "<b>Hot</b> and <b>cold</b>. <b>Big</b> and <b>small</b>. <b>Up</b> and <b>down</b>. <b>Happy</b> and <b>sad</b>.",
+    "A good trick: think about what the word means, then think of the most different thing you can."
+  ],
   questions: [
     {
       q: "What is the opposite of 'hot'?",

@@ -69,3 +69,31 @@
 @media (max-width:480px){
   .quiz{padding:18px 14px 22px;}
 }
+
+/* ---------- explanation before the quiz ---------- */
+.lesson-explain{
+  background:#fff;
+  border-radius:20px;
+  padding:26px 28px 30px;
+  box-shadow:0 10px 28px rgba(39,50,63,.10);
+  text-align:left;
+}
+.explain-label{
+  font-family:'Baloo 2',cursive;
+  font-weight:800;
+  font-size:.9rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--bot-dark);
+  margin-bottom:10px;
+}
+.lesson-explain p{
+  font-size:1.1rem;
+  font-weight:600;
+  color:#3c4a5a;
+  line-height:1.65;
+  margin-bottom:12px;
+}
+.lesson-explain p b{color:var(--ink);}
+.lesson-explain .cta{display:block;margin:20px auto 0;width:max-content;}
+@media (max-width:480px){ .lesson-explain{padding:20px 18px 24px;} .lesson-explain p{font-size:1.02rem;} }
